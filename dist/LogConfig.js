@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const class_validator_1 = require("class-validator");
 const Config_1 = require("./Config");
-const LogCategoryConfig_1 = require("LogCategoryConfig");
+const LogCategoryConfig_1 = require("./LogCategoryConfig");
 class LogConfig extends Config_1.Config {
     getName() {
         return 'log';

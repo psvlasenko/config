@@ -6,5 +6,6 @@ export * from './DbConfig';
 export * from './ServerConfig';
 export * from './RedisConfig';
 export * from './LogConfig';
+export * from './LogCategoryConfig';
 export * from './ServicesConfig';
 export * from './PostgresConfig';

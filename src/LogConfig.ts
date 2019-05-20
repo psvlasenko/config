@@ -1,6 +1,6 @@
 import { ValidateNested } from 'class-validator';
 import { Config } from './Config';
-import { LogCategoryConfig } from 'LogCategoryConfig';
+import { LogCategoryConfig } from './LogCategoryConfig';
 
 export class LogConfig extends Config {
     @ValidateNested()

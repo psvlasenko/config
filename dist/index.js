@@ -10,6 +10,7 @@ __export(require("./DbConfig"));
 __export(require("./ServerConfig"));
 __export(require("./RedisConfig"));
 __export(require("./LogConfig"));
+__export(require("./LogCategoryConfig"));
 __export(require("./ServicesConfig"));
 __export(require("./PostgresConfig"));
 //# sourceMappingURL=index.js.map
