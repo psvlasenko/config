@@ -1,22 +1,10 @@
-import { Config } from './Config';
-import { ConfigFileChain } from './ConfigFileChain';
-import { ConfigSource } from './ConfigSource';
-import { ConfigFactory } from './ConfigFactory';
-import { DbConfig } from './DbConfig';
-import { ServerConfig } from './ServerConfig';
-import { RedisConfig } from './RedisConfig';
-import { LogConfig, LogCategoryConfig } from './LogConfig';
-import { ServicesConfig } from './ServicesConfig';
-
-export {
-  ConfigFileChain,
-  ConfigSource,
-  Config,
-  ConfigFactory,
-  DbConfig,
-  RedisConfig,
-  ServerConfig,
-  LogConfig,
-  LogCategoryConfig,
-  ServicesConfig,
-};
+export * from './Config';
+export * from './ConfigFileChain';
+export * from './ConfigSource';
+export * from './ConfigFactory';
+export * from './DbConfig';
+export * from './ServerConfig';
+export * from './RedisConfig';
+export * from './LogConfig';
+export * from './ServicesConfig';
+export * from './PostgresConfig';
