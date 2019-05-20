@@ -1,4 +1,4 @@
-import { Config } from 'Config';
+import { Config } from './Config';
 export declare class PostgresConfig extends Config {
     type: 'postgres';
     host: string;

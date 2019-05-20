@@ -11,31 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const class_validator_1 = require("class-validator");
 const Config_1 = require("./Config");
-var LogType;
-(function (LogType) {
-    LogType["file"] = "file";
-    LogType["dateFile"] = "dateFile";
-    LogType["console"] = "console";
-})(LogType = exports.LogType || (exports.LogType = {}));
-class LogCategoryConfig {
-}
-__decorate([
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsString(),
-    class_validator_1.IsEnum(LogType),
-    __metadata("design:type", String)
-], LogCategoryConfig.prototype, "type", void 0);
-__decorate([
-    class_validator_1.IsOptional(),
-    class_validator_1.IsString(),
-    __metadata("design:type", String)
-], LogCategoryConfig.prototype, "filename", void 0);
-__decorate([
-    class_validator_1.IsString(),
-    class_validator_1.IsNotEmpty(),
-    __metadata("design:type", String)
-], LogCategoryConfig.prototype, "level", void 0);
-exports.LogCategoryConfig = LogCategoryConfig;
+const LogCategoryConfig_1 = require("LogCategoryConfig");
 class LogConfig extends Config_1.Config {
     getName() {
         return 'log';
@@ -55,11 +31,11 @@ class LogConfig extends Config_1.Config {
 }
 __decorate([
     class_validator_1.ValidateNested(),
-    __metadata("design:type", LogCategoryConfig)
+    __metadata("design:type", LogCategoryConfig_1.LogCategoryConfig)
 ], LogConfig.prototype, "main", void 0);
 __decorate([
     class_validator_1.ValidateNested(),
-    __metadata("design:type", LogCategoryConfig)
+    __metadata("design:type", LogCategoryConfig_1.LogCategoryConfig)
 ], LogConfig.prototype, "access", void 0);
 exports.LogConfig = LogConfig;
 //# sourceMappingURL=LogConfig.js.map

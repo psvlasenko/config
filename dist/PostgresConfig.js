@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const inversify_1 = require("inversify");
 const class_validator_1 = require("class-validator");
-const Config_1 = require("Config");
+const Config_1 = require("./Config");
 let PostgresConfig = class PostgresConfig extends Config_1.Config {
     constructor() {
         super(...arguments);

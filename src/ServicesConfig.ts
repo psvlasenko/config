@@ -4,24 +4,24 @@ import { Validator } from 'class-validator';
 
 @injectable()
 export class ServicesConfig extends Config {
-  [index: string]: string | Function;
+    [index: string]: string | Function;
 
-  public async validate() {
-    await super.validate();
-    const validator = new Validator;
-    for (const service in this) {
-      if ('function' === typeof service) {
-        continue;
-      }
+    public async validate() {
+        await super.validate();
+        const validator = new Validator;
 
-      if (!validator.isURL(this[service] as string)) {
-        throw new Error(`Config ${this.getName()}: ${service} value must be URL`);
-      }
+        for (const service in this) {
+            if ('function' === typeof service) {
+                continue;
+            }
+
+            if (!validator.isURL(this[service] as string)) {
+                throw new Error(`Config ${this.getName()}: ${service} value must be URL`);
+            }
+        }
     }
-  }
 
-  public getName() {
-    return 'services';
-  }
-
+    public getName() {
+        return 'services';
+    }
 }
