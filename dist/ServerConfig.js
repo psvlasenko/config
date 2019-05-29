@@ -10,10 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const os = require("os");
-const inversify_1 = require("inversify");
 const Config_1 = require("./Config");
 const class_validator_1 = require("class-validator");
-let ServerConfig = class ServerConfig extends Config_1.Config {
+class ServerConfig extends Config_1.Config {
     async validate() {
         await super.validate();
         super.validateIpOrHostname(this.host, 'host');
@@ -21,7 +20,7 @@ let ServerConfig = class ServerConfig extends Config_1.Config {
     getName() {
         return 'server';
     }
-};
+}
 __decorate([
     class_validator_1.IsNotEmpty(),
     __metadata("design:type", String)
@@ -50,8 +49,5 @@ __decorate([
     class_validator_1.Matches(/^(([a-z0-9]*)|(\.\/)|((\.\.\/)*))(\/*([a-z0-9]+\/)*)/),
     __metadata("design:type", String)
 ], ServerConfig.prototype, "public", void 0);
-ServerConfig = __decorate([
-    inversify_1.injectable()
-], ServerConfig);
 exports.ServerConfig = ServerConfig;
 //# sourceMappingURL=ServerConfig.js.map

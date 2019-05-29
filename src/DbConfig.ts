@@ -1,8 +1,6 @@
-import { injectable } from 'inversify';
 import { IsNotEmpty, IsString } from 'class-validator';
 import { Config } from './Config';
 
-@injectable()
 export class DbConfig extends Config {
     public type!: 'postgres';
 

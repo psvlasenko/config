@@ -1,9 +1,7 @@
 import * as os from 'os';
-import { injectable } from 'inversify';
 import { Config } from './Config';
 import { IsInt, IsNotEmpty, IsOptional, Max, Min, Matches } from 'class-validator';
 
-@injectable()
 export class ServerConfig extends Config {
     @IsNotEmpty()
     public host!: string;

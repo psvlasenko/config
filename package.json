@@ -6,13 +6,13 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "./node_modules/.bin/tslint --force 'src/**/*.ts' && ./node_modules/.bin/tsc",
-    "tslint": "./node_modules/.bin/tslint --project ."
+    "tslint": "./node_modules/.bin/tslint --project .",
+    "update": "rm -rf node_modules && rm -rf yarn.lock && yarn cache clean && yarn"
   },
   "dependencies": {
     "class-transformer": "0.1.9",
     "class-validator": "^0.8.1",
-    "deep-extend": "0.6.0",
-    "inversify": "5.0.1"
+    "deep-extend": "0.6.0"
   },
   "devDependencies": {
     "@types/deep-extend": "0.4.31",

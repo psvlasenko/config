@@ -1,8 +1,6 @@
-import { injectable } from 'inversify';
 import { Config } from './Config';
 import { Validator } from 'class-validator';
 
-@injectable()
 export class ServicesConfig extends Config {
     [index: string]: string | Function;
 

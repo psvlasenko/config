@@ -1,7 +1,5 @@
-import { injectable } from 'inversify';
 import { validate, Validator } from 'class-validator';
 
-@injectable()
 export abstract class Config {
 
     public async validate() {

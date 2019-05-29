@@ -9,10 +9,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const inversify_1 = require("inversify");
 const class_validator_1 = require("class-validator");
 const Config_1 = require("./Config");
-let PostgresConfig = class PostgresConfig extends Config_1.Config {
+class PostgresConfig extends Config_1.Config {
     constructor() {
         super(...arguments);
         this.type = 'postgres';
@@ -24,7 +23,7 @@ let PostgresConfig = class PostgresConfig extends Config_1.Config {
     getName() {
         return 'db';
     }
-};
+}
 __decorate([
     class_validator_1.IsNotEmpty(),
     __metadata("design:type", String)
@@ -56,8 +55,5 @@ __decorate([
     class_validator_1.IsArray(),
     __metadata("design:type", Array)
 ], PostgresConfig.prototype, "migrations", void 0);
-PostgresConfig = __decorate([
-    inversify_1.injectable()
-], PostgresConfig);
 exports.PostgresConfig = PostgresConfig;
 //# sourceMappingURL=PostgresConfig.js.map
