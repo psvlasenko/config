@@ -10,7 +10,7 @@
     "update": "rm -rf node_modules && rm -rf yarn.lock && yarn cache clean && yarn"
   },
   "dependencies": {
-    "class-transformer": "0.1.9",
+    "class-transformer": "0.3.1",
     "class-validator": "^0.8.1",
     "deep-extend": "0.6.0"
   },
